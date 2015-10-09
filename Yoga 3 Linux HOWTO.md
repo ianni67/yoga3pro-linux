@@ -1,6 +1,9 @@
 Installing Ubuntu 14.10 on Yoga 3 Pro
 =====================================
 
+(NOTE: the bluetooth, wifi and touchscreen fixes work also for 15.04. I did not check the other fixes because with ubuntu gnome version I did not have any other issue.)
+======================================
+
 With this intructions you get a Ubuntu 14.10 on a Yoga 3 Pro from Leonvo with full Secure Boot enabled UEFI mode. This means dual boot to Windows 8 works just fine. When you turn on the Yoga Grub will greet you and you can choose to boot Ubuntu (the default) or Windows. All relevant components work good enough to use this platform as your main on the go workstation including Wifi, Bluetooth, touch pad and touch screen.
 
 # Create recovery USB flash drive
@@ -149,6 +152,16 @@ The firmware for the Bluetooth controller is not available in the Linux firmware
 	reboot
 
 Now you can enable Bluetooth from the tray icon. To check in the terminal, run `hciconfig dev`. Your device will appear there as UP.
+
+If you already deleted the Windows partition, the following post explains how to find the driver from the Microsoft web site:
+https://github.com/advancingu/XPS13Linux/issues/1
+
+
+# Touch screen recover after suspend/resume
+
+After suspend/resume the touch screen did now work for me. MaTachi in the following post (see \#3) describes a fix that works perfectly:
+https://bbs.archlinux.org/viewtopic.php?id=190751
+
 
 # HiDPI support
 
